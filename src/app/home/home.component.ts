@@ -11,6 +11,10 @@ export class HomeComponent implements OnInit {
   clickCounter: number = 0;
   // tslint:disable-next-line:no-inferrable-types
   timeVariable: string = 'times';
+   // tslint:disable-next-line:no-inferrable-types
+  name: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  newName: string = '';
   constructor() { }
 
   ngOnInit(): void {
@@ -27,6 +31,10 @@ export class HomeComponent implements OnInit {
       this.timeVariable = '';
       this.timeVariable = 'times';
     }
+   }
+
+   getName(){
+     this.newName = this.name;
    }
 
 }

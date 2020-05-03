@@ -32,9 +32,22 @@ export class HomeComponent implements OnInit {
       this.timeVariable = 'times';
     }
    }
+   resetCounter(){
+     this.clickCounter = 0;
+     this.timeVariable = 'time';
+   }
 
    getName(){
      this.newName = this.name;
+   }
+
+   setClass(){
+     // tslint:disable-next-line:prefer-const
+     let myClass = {
+       active : this.clickCounter > 4,
+       notActive : this.clickCounter <= 4,
+     };
+     return myClass;
    }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-breweries',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BreweriesComponent implements OnInit {
 
-  constructor() { }
+  // tslint:disable-next-line:variable-name
+  constructor( private _http: HttpService) { }
 
   ngOnInit(): void {
+    this._http.testMethod();
   }
 
 }
